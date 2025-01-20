@@ -67,7 +67,8 @@ $(document).ready(function()
         },
         invalidHandler: function(form, validador)
         {
-            alert("Por favor, preencha os campos para prosseguir com a compra!")
+            const camposInvalidos = validador.numberOfInvalids()
+            alert(`Existem ${camposInvalidos} campos não preenchidos corretamente!`)
         }
     })
 })
